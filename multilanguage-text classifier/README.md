@@ -11,5 +11,4 @@ An end-to-end Machine Learning pipeline utilizing character-level features and a
 
 ## How To Execute
 1. Set up dependencies: `pip install pandas scikit-learn matplotlib seaborn langdetect`
-2. Train and validate: `python train.py`
-3. Run operational runtime controls: `python predict.py`
+2. Train and validate: `python main.py`
