@@ -53,7 +53,7 @@ print("Accuracy Score:")
 print(accuracy_score(Y_test, Y_pred))
 
 # ==========================================================
-# 🔥 BONUS FEATURE: VISUALIZE CONFUSION MATRIX
+# BONUS FEATURE: VISUALIZE CONFUSION MATRIX
 # ==========================================================
 print("Generating Confusion Matrix Plot...")
 cm = confusion_matrix(Y_test, Y_pred)
@@ -68,7 +68,7 @@ plt.savefig('confusion_matrix.png') # Saves the image to your folder
 print("Saved plot as 'confusion_matrix.png'!")
 
 # ==========================================================
-# 🔥 BONUS FEATURE: SAVE TRAINED MODEL USING PICKLE
+# BONUS FEATURE: SAVE TRAINED MODEL USING PICKLE
 # ==========================================================
 print("Saving model to disk...")
 with open("language_model.pkl", "wb") as f:
@@ -95,7 +95,7 @@ while True:
     input_vectorized = vectorizer.transform([cleaned_input])
     
     # ==========================================================
-    # 🔥 BONUS FEATURE: DETECT TOP 2 LANGUAGES WITH PROBABILITIES
+    # BONUS FEATURE: DETECT TOP 2 LANGUAGES WITH PROBABILITIES
     # ==========================================================
     probabilities = model.predict_proba(input_vectorized)[0]
     all_languages = model.classes_
@@ -111,7 +111,7 @@ while True:
         print(f"- {lang}: {prob:.2f}% confidence")
 
     # ==========================================================
-    # 🔥 BONUS FEATURE: COMPARE WITH LANGDETECT LIBRARY
+    # BONUS FEATURE: COMPARE WITH LANGDETECT LIBRARY
     # ==========================================================
     try:
         langdetect_result = detect_langs(user_input)[0]
