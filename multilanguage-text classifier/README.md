@@ -1,13 +1,19 @@
 # Multilingual Language Detection System
 
-An end-to-end Machine Learning pipeline utilizing character-level features and a Multinomial Naive Bayes model to dynamically identify the native language of provided textual data strings.
+> A fast, lightweight NLP pipeline leveraging character-level TF-IDF and Multinomial Naive Bayes to identify text languages with high precision.
 
 ## Features
-- **Engine Core:** Character-level TF-IDF Vectorization ($N$-grams: 2 to 4) optimizing calculations for short sentences or unique unicode character sets.
-- **Visual Analytics:** Generates confusion matrices mapping classification performance.
-- **Top-2 Evaluation:** Reports secondary probable classification options alongside confidence score indicators.
-- **Benchmarking Integration:** Cross-compares real-time inferences with the `langdetect` Python library.
-- **Batch Processor:** Accepts user-defined structural target documents (CSVs) for swift multi-row automated profiling.
+- Custom Machine Learning Pipeline: Trained on custom datasets using scikit-learn.
+
+Sub-word N-gram Analysis: Uses character-level n-grams (2 to 4 characters) making it robust against typos and highly accurate for short text.
+
+Top-2 Confidence Scores: Displays the top two predicted languages alongside their exact confidence percentages.
+
+Library Comparison: Cross-references results in real-time with the established langdetect library.
+
+Performance Visualization: Automatically generates and saves a Seaborn confusion matrix heatmap (confusion_matrix.png) during evaluation.
+
+Model Persistence: Saves the trained model and vectorizer as .pkl files for instant reloading without retraining.
 
 ## How To Execute
 1. Set up dependencies: `pip install pandas scikit-learn matplotlib seaborn langdetect`
